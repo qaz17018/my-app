@@ -1,0 +1,29 @@
+.home {
+    padding: 20px;
+    margin-left: 220px;
+    /* Adjust for sidebar width */
+}
+
+.home h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.home .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.home .gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+
+.home .gallery-item img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,10 @@
+.explore {
+    padding: 20px;
+    margin-left: 220px;
+    /* Adjust for sidebar width */
+}
+
+.explore h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}

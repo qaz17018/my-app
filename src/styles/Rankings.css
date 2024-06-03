@@ -1,0 +1,10 @@
+.rankings {
+    padding: 20px;
+    margin-left: 220px;
+    /* Adjust for sidebar width */
+}
+
+.rankings h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
