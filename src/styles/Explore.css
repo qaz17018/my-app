@@ -4,7 +4,13 @@
     /* Adjust for sidebar width */
 }
 
-.explore h1 {
+.xixi {
+    border: 1px solid black;
+}
+
+.hahaha {
+    
+    all: initial;
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
