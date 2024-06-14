@@ -34,7 +34,8 @@ aside {
       border: none;
       padding: 0px;
       margin: 0px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, Helvetica, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, Helvetica, sans-serif;
       font-size: 19px;
       line-height: 24px;
       font-weight: bold;
@@ -49,7 +50,6 @@ aside {
         --c-color: var(--c-active);
       }
 
-
       .icon {
         margin-right: 16px;
         position: relative;
@@ -61,7 +61,7 @@ aside {
         }
       }
 
-      &>div {
+      & > div {
         display: inline-flex;
         padding: 10px 20px 10px 12px;
         margin: -10px -20px -10px -12px;
@@ -87,7 +87,7 @@ aside {
 
         &.active {
           --icon-outline-o: 0;
-          --icon-outline-s: .9;
+          --icon-outline-s: 0.9;
           --icon-fill-size: 12px;
         }
 
@@ -117,15 +117,25 @@ aside {
               height: 7px;
               stroke: var(--c-background);
               fill: var(--c-active);
-              stroke-width: .5px;
+              stroke-width: 0.5px;
               stroke-linecap: round;
               stroke-linejoin: round;
               opacity: var(--icon-feather-left-o);
-              transform: translate(var(--icon-feather-left-x), var(--icon-feather-left-y)) scale(var(--icon-feather-left-s)) rotate(var(--icon-feather-left-r)) translateZ(0);
+              transform: translate(
+                  var(--icon-feather-left-x),
+                  var(--icon-feather-left-y)
+                )
+                scale(var(--icon-feather-left-s))
+                rotate(var(--icon-feather-left-r)) translateZ(0);
 
               &.right {
                 opacity: var(--icon-feather-right-o);
-                transform: translate(var(--icon-feather-right-x), var(--icon-feather-right-y)) scale(var(--icon-feather-right-s)) rotate(var(--icon-feather-right-r)) translateZ(0);
+                transform: translate(
+                    var(--icon-feather-right-x),
+                    var(--icon-feather-right-y)
+                  )
+                  scale(var(--icon-feather-right-s))
+                  rotate(var(--icon-feather-right-r)) translateZ(0);
               }
             }
           }
@@ -193,6 +203,102 @@ aside {
           }
         }
       }
+
+      &.messages {
+        --top-r: 0deg;
+        --icon-stroke: var(--c-color);
+
+        &.active {
+          --icon-stroke: var(--c-sidebar);
+        }
+
+        .icon {
+          .top {
+            position: absolute;
+            top: 1px;
+            left: 0;
+            transform-style: preserve-3d;
+            transform-origin: 50% 15%;
+            transform: rotateX(var(--top-r));
+
+            svg {
+              height: 13px;
+              backface-visibility: hidden;
+              stroke-width: 1.5px;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+
+              &.default {
+                fill: var(--icon-fill);
+                stroke: var(--icon-stroke);
+              }
+
+              &.inner {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: rotateX(180deg);
+                stroke: var(--c-sidebar);
+
+                rect {
+                  fill: #0168a7;
+                  stroke: none;
+                }
+
+                path {
+                  fill: #0168a7;
+                }
+              }
+            }
+          }
+
+          svg {
+            fill: var(--icon-fill);
+            stroke: var(--icon-stroke);
+            stroke-width: 1.5px;
+
+            .background {
+              fill: #0168a7;
+            }
+          }
+        }
+      }
+
+      &.bookmark {
+        --icon-default-y: 0px;
+        --icon-background-y: -17.5px;
+        --icon-corner-fill: var(--c-background);
+
+        &.active {
+          --icon-corner-fill: var(--c-active);
+        }
+
+        .icon {
+          svg {
+            stroke: currentColor;
+            stroke-width: 1.5px;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+
+            .background {
+              stroke: none;
+              fill: currentColor;
+              transform: translateY(var(--icon-background-y));
+            }
+
+            .corner {
+              fill: var(--icon-corner-fill);
+            }
+
+            .default {
+              transform: translateY(var(--icon-default-y));
+              fill: var(--icon-fill);
+            }
+          }
+        }
+      }
+
+      
     }
   }
 }
@@ -217,7 +323,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #15181C;
+  background: #15181c;
   padding: 40px;
 
   .dribbble {
