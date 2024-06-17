@@ -97,6 +97,36 @@ const Sidebar = () => (
                     Bookmarks
                 </div>
             </button>
+            <button className='lists'>
+                <div>
+                    <div className='icon'>
+                        <svg className='pencil' viewBox='0 0 8 22'>
+                            <path
+                                d="M1.34869 4.87898L6.65199 4.87898M6.65193 16.8942L4.00028 20.6065L1.34863 16.8942L1.34863 2.66652C1.34869 2.26878 1.50672 1.88734 1.78797 1.60609C2.06922 1.32484 2.45066 1.16681 2.84841 1.16675L5.15216 1.16675C5.54991 1.16681 5.93134 1.32484 6.21259 1.60609C6.49384 1.88734 6.65187 2.26878 6.65193 2.66652V16.8942Z" />
+                        </svg>
+                        <svg className='list' viewBox='0 0 24 24'>
+                            <rect x="2.5" y="2.5" width="19" height="19" rx="2.25" />
+                            <path class="top" d="M7 8H17" />
+                            <path class="middle" d="M7 12H17" />
+                            <path class="bottom" d="M7 16H12" />
+                        </svg>
+                    </div>
+                    Lists
+                </div>
+            </button>
+            <button className='profile'>
+                <div>
+                    <div className='icon'>
+                        <svg viewBox="0 0 24 24">
+                            <path className="head"
+                                d="M16 7C16 9.76142 15.7614 11 12 11C8.23858 11 8 9.76142 8 7C8 4.23858 9.23858 2.25 12 2.25C14.7614 2.25 16 4.23858 16 7Z" />
+                            <path
+                                d="M11.9999 14C15.9613 14 18.962 16.5405 19.4799 19.5352C19.6485 20.5106 18.7676 21.25 17.7778 21.25H6.22181C5.23198 21.25 4.35113 20.5106 4.51978 19.5352C5.03763 16.5405 8.03845 14 11.9999 14Z" />
+                        </svg>
+                    </div>
+                    Profile
+                </div>
+            </button>
         </nav>
     </aside>
 );

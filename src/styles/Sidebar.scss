@@ -298,7 +298,103 @@ aside {
         }
       }
 
-      
+      &.lists {
+        --icon-pencil-o: 0;
+        --icon-pencil-x: 0;
+        --icon-pencil-y: -0.5px;
+        --icon-pencil-r: 45deg;
+        --icon-line: var(--c-color);
+        --icon-line-top: 0px;
+        --icon-line-middle: 0px;
+        --icon-line-bottom: 0px;
+
+        &.active {
+          --icon-line: var(--c-background);
+        }
+
+        .icon {
+          svg {
+            stroke-width: 1.5px;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+
+            &.pencil {
+              width: 8px;
+              height: 22px;
+              fill: var(--c-active);
+              stroke: var(--c-sidebar);
+              position: absolute;
+              pointer-events: none;
+              left: 2px;
+              top: -12px;
+              transform-origin: 50% 21px;
+              opacity: var(--icon-pencil-o);
+              transform: translate(var(--icon-pencil-x), var(--icon-pencil-y))
+                rotate(var(--icon-pencil-r));
+            }
+
+            &.list {
+              stroke: currentColor;
+
+              rect {
+                fill: var(--icon-fill);
+              }
+
+              path {
+                stroke: var(--icon-line);
+                stroke-dasharray: 10px;
+                stroke-dashoffset: var(--icon-line-top);
+              }
+
+              &.middle {
+                stroke-dashoffset: var(--icon-line-middle);
+              }
+
+              &.bottom {
+                stroke-dasharray: 5px;
+                stroke-dashoffset: var(--icon-line-bottom);
+              }
+            }
+          }
+        }
+      }
+
+      &.profile {
+        --icon-r: 0deg;
+        --icon-eye-r: 90deg;
+        --icon-eye-r-s: 1;
+
+        .icon {
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 13px;
+            top: 5px;
+            width: 2px;
+            height: 2px;
+            border-radius: 1px;
+            background: var(--c-background);
+            box-shadow: 40px 0 0 --c-background;
+            transform: rotateX(var(--icon-eye-r));
+          }
+
+          &::before {
+            left: 9px;
+            transform: scaleX(var(--icon-eye-r-s)) rotateX(var(--icon-eye-r));
+          }
+
+          svg {
+            fill: var(--icon-fill);
+            stroke: currentColor;
+            stroke-width: 1.5px;
+            .head {
+              transform-origin: 12px 9px;
+              transform: rotate(var(--icon-r));
+            }
+          }
+        }
+      }
     }
   }
 }
