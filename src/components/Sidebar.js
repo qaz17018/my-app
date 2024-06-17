@@ -22,6 +22,16 @@ const Sidebar = () => (
                             <path className="fill"
                                 d="M22.4824 7.448L12.4695 1.995C12.1753 1.835 11.8215 1.835 11.5282 1.995L1.52027 7.448C1.0387 7.712 0.859349 8.318 1.11896 8.804C1.29732 9.139 1.63918 9.329 1.99094 9.329C2.14948 9.329 2.31199 9.291 2.46161 9.209L3.18892 8.813L4.76442 20.063C4.97846 21.277 6.06248 22.125 7.40018 22.125H16.5976C17.9353 22.125 19.0193 21.277 19.2353 20.037L20.8088 8.812L21.5391 9.21C22.0197 9.473 22.6212 9.292 22.8808 8.806C23.1414 8.32 22.96 7.713 22.4805 7.451L22.4824 7.448ZM11.9989 15.533C10.2202 15.533 8.7785 14.078 8.7785 12.283C8.7785 10.488 10.2202 9.033 11.9989 9.033C13.7775 9.033 15.2192 10.488 15.2192 12.283C15.2192 14.078 13.7775 15.533 11.9989 15.533Z" />
                         </svg>
+                        <svg className="feather left" viewBox="0 0 14 7">
+                            <path
+                                d="M9.16667 1L13.5 3.94648C11.6429 6.89297 4.83333 6.89297 0.5 2.47324C3.59524 1 6.69048 2.47324 6.69048 2.47324L5.45238 1L9.16667 2.47324V1Z" />
+                            <path d="M12 4.1C9 4.65 4.5 3.5 4.5 3.5" />
+                        </svg>
+                        <svg className="feather right" viewBox="0 0 14 7">
+                            <path
+                                d="M4.83333 1L0.499999 3.94648C2.35714 6.89297 9.16667 6.89297 13.5 2.47324C10.4048 1 7.30952 2.47324 7.30952 2.47324L8.54762 1L4.83333 2.47324V1Z" />
+                            <path d="M2 4.1C5 4.65 9.5 3.5 9.5 3.5" />
+                        </svg>
                     </div>
                     Home
                 </div>
@@ -39,7 +49,7 @@ const Sidebar = () => (
                     Explore
                 </div>
             </button>
-            <button className='notification active'>
+            <button className='notifications active'>
                 <div>
                     <div className='icon'>
                         <svg viewBox="0 0 24 24">
@@ -86,12 +96,12 @@ const Sidebar = () => (
                                 </clipPath>
                             </defs>
                             <g clip-path="url(#default-clip)">
-                                <path class="background"
+                                <path className="background"
                                     d="M3.25 4.75C3.25 3.36929 4.36929 2.25 5.75 2.25H18.25C19.6307 2.25 20.75 3.36929 20.75 4.75V15.25H3.25V4.75Z" />
-                                <path class="default"
+                                <path className="default"
                                     d="M4 4.7736C4 3.79407 4.79594 3 5.77778 3H18.2222C19.2041 3 20 3.79407 20 4.7736V20.3337C20 20.8741 19.3884 21.1889 18.947 20.8758L12 15.9473L5.05302 20.8758C4.61163 21.1889 4 20.8741 4 20.3337V4.7736Z" />
                             </g>
-                            <path class="corner" d="M5.5 3L12 3.01L18.5 3V3.01H5.5V3Z" />
+                            <path className="corner" d="M5.5 3L12 3.01L18.5 3V3.01H5.5V3Z" />
                         </svg>
                     </div>
                     Bookmarks
@@ -106,9 +116,9 @@ const Sidebar = () => (
                         </svg>
                         <svg className='list' viewBox='0 0 24 24'>
                             <rect x="2.5" y="2.5" width="19" height="19" rx="2.25" />
-                            <path class="top" d="M7 8H17" />
-                            <path class="middle" d="M7 12H17" />
-                            <path class="bottom" d="M7 16H12" />
+                            <path className="top" d="M7 8H17" />
+                            <path className="middle" d="M7 12H17" />
+                            <path className="bottom" d="M7 16H12" />
                         </svg>
                     </div>
                     Lists
